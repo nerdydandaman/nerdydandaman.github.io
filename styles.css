@@ -1,8 +1,8 @@
 body {
     font-family: 'Times New Roman', Times, serif;
-    font-size: 16px;
+    font-size: .9896vw;
     /* background-size: cover; */
-    /* background-size: 100%; */
+    background-size: 100%;
     overflow: hidden;
     animation-name: slide;
     animation-iteration-count: infinite;
@@ -13,8 +13,13 @@ body {
     border: solid;
     border-width: 2px;
     background: linear-gradient(rgb(115, 234, 251),rgb(108, 82, 251));
-    opacity: 92%;
+    opacity: 90%;
     /* width:99vw */
+}
+/* Formatting the drop-down menu */
+select {
+    width: 6.94vw;
+    font-size: .85vw;
 }
 /* Designing the sliders */
 .pickupvelocity::-webkit-slider-thumb {
@@ -54,86 +59,90 @@ input.displayedTVel:focus {
 input.resetting:focus {
     outline-width: 0;
 }
+/* Controlling the positioning of the sliders, menus, and buttons. */
+/* Setting the position of the reference-frame selecting drop-down menu. */
+.chooseframetitle {
+    display: inline-block;
+    margin-left: 13.2vw;
+}
+.chooseframe {
+    display: inline-block;
+    margin-left: 25.8vw;
+}
+/* Setting the position of the pickup-truck velocity slider. */
+.pickupvelocitytitle {
+    display: inline-block;
+    margin-left: 13.2vw;
+    margin-right: 13.2vw;
+}
+.pickupvelocity {
+    display: inline-block;
+    margin-left: 16.0vw;
+    margin-right: 16.7vw;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6.7708vw;
+    height: .8vh;
+    background: whitesmoke;
+    border-radius: 6px;
+    outline: none; 
+}
+/* .fakepickupvelocity {
+    display: inline-block;
+    margin-left: 13.16vw;
+    margin-right: 15.4vw;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6.7708vw;
+     height: .7407vh;
+    background: whitesmoke;
+    border-radius: 6px;
+    outline: none; 
+} */
+/* Designing the sliders */
+/* Setting the position of the car velocity slider. */
+/* .carvelocitytitle {
+    display: inline-block;
+    margin-right: 10.9375vw;
+}
+.carvelocity {
+    display: inline-block;
+    margin-right: 12.76vw;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 6.7708vw;
+    height: .7407vh;
+    background: whitesmoke;
+    border-radius: 6px;
+    outline: none;
+} */
+/* Setting the location of the reset button. */
+.resetting {
+    display: inline-block;
+    border-radius: 11px;
+    margin-right: 17.5vw;
+    width: 3.4vw;
+    font-size: .85vw;
+}
+/* Setting the positions of the slider velocity values. */
+ .displayedTVel {
+    margin-left: 50.43vw;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 3.13vw;
+    font-size: .85vw;
+    background: whitesmoke;
+    border-radius: 10px;
+}
+/* .displayedCVel {
+    margin-left: 16.667vw;
+    -webkit-appearance: none;
+    appearance: none;
+    width: .78125vw;
+    background: whitesmoke;
+    border-radius: 10px;
+} */
 @media only screen and (max-width: 3840px) {
-    /* Controlling the positioning of the sliders, menus, and buttons. */
-    /* Setting the position of the reference-frame selecting drop-down menu. */
-    .chooseframetitle {
-        display: inline-block;
-        margin-left: 950px;
-    }
-    .chooseframe {
-        display: inline-block;
-        margin-left: 1140px;
-    }
-    /* Setting the position of the pickup-truck velocity slider. */
-    .pickupvelocitytitle {
-        display: inline-block;
-        margin-left: 210px;
-        margin-right: 230px;
-    }
-    .pickupvelocity {
-        display: inline-block;
-        margin-left: 245px;
-        margin-right: 211px;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 130px;
-        height: 8px;
-        background: whitesmoke;
-        border-radius: 6px;
-        outline: none; 
-    }
-    /* .fakepickupvelocity {
-        display: inline-block;
-        margin-left: 245px;
-        margin-right: 211px;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 130px;
-        height: 8px;
-        background: whitesmoke;
-        border-radius: 6px;
-        outline: none; 
-    } */
-    /* Designing the sliders */
-    /* Setting the position of the car velocity slider. */
-    /* .carvelocitytitle {
-        display: inline-block;
-        margin-right: 210px;
-    }
-    .carvelocity {
-        display: inline-block;
-        margin-right: 245px;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 130px;
-        height: 8px;
-        background: whitesmoke;
-        border-radius: 6px;
-        outline: none;
-    } */
-    /* Setting the location of the reset button. */
-    .resetting {
-        display: inline-block;
-        border-radius: 11px;
-    }
-    /* Setting the positions of the slider velocity values. */
-    .displayedTVel {
-        margin-left: 1560px;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 15px;
-        background: whitesmoke;
-        border-radius: 10px;
-    }
-    /* .displayedCVel {
-        margin-left: 320px;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 15px;
-        background: whitesmoke;
-        border-radius: 10px;
-    } */
     /* Animating the pickup truck to translate across the screen. */
     .pickup {
         animation-name: movetruck;
@@ -147,7 +156,7 @@ input.resetting:focus {
         animation-iteration-count: infinite;
         z-index: 1;
         animation-timing-function: linear;  
-        offset-path: path('M2150,1326');
+        offset-path: path('M2162,1326');
     }
     /* .pickup5 {
         animation-name: movetruck5;
@@ -451,21 +460,21 @@ input.resetting:focus {
         animation-iteration-count: infinite;
         z-index: 0;
         animation-timing-function: linear;
-        offset-path: path('M-6,1110 L4054,1110');
+        offset-path: path('M-6,1308 L4054,1308');
     }
     .alternateCrate {
         animation-name: movecrate;
         animation-iteration-count: infinite;
         z-index: 0;
         animation-timing-function: linear;
-        offset-path: path('M-6,1110 L4054,1110');
+        offset-path: path('M-6,1308 L4054,1308');
     }
     .stillcrate {
         animation-name: stillcrate;
         animation-iteration-count: infinite;
         z-index: 0;
         animation-timing-function: linear;
-        offset-path: path('M1892,655');
+        offset-path: path('M1892,1308');
     }
     /* In order to animate the crate for each frame, I will have to define a path that corresponds very strictly with the timing via keyframes. The crate is going to be in different spots on the x axis at the same times between them for each of the velocities. */
     /* .crate5 {
@@ -1118,85 +1127,6 @@ input.resetting:focus {
     }
 }
 @media only screen and (max-width: 1920px) {
-    /* Controlling the positioning of the sliders, menus, and buttons. */
-    /* Setting the position of the reference-frame selecting drop-down menu. */
-    .chooseframetitle {
-        display: inline-block;
-        margin-left: 8.4896vw;
-    }
-    .chooseframe {
-        display: inline-block;
-        margin-left: 19.15vw;
-    }
-    /* Setting the position of the pickup-truck velocity slider. */
-    .pickupvelocitytitle {
-        display: inline-block;
-        margin-left: 10.9375vw;
-        margin-right: 11.979vw;
-    }
-    .pickupvelocity {
-        display: inline-block;
-        margin-left: 13.16vw;
-        margin-right: 15.2vw;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 6.7708vw;
-        height: .7407vh;
-        background: whitesmoke;
-        border-radius: 6px;
-        outline: none; 
-    }
-    /* .fakepickupvelocity {
-        display: inline-block;
-        margin-left: 13.16vw;
-        margin-right: 15.4vw;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 6.7708vw;
-        height: .7407vh;
-        background: whitesmoke;
-        border-radius: 6px;
-        outline: none; 
-    } */
-    /* Designing the sliders */
-    /* Setting the position of the car velocity slider. */
-    /* .carvelocitytitle {
-        display: inline-block;
-        margin-right: 10.9375vw;
-    }
-    .carvelocity {
-        display: inline-block;
-        margin-right: 12.76vw;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 6.7708vw;
-        height: .7407vh;
-        background: whitesmoke;
-        border-radius: 6px;
-        outline: none;
-    } */
-    /* Setting the location of the reset button. */
-    .resetting {
-        display: inline-block;
-        border-radius: 11px;
-    }
-    /* Setting the positions of the slider velocity values. */
-    .displayedTVel {
-        margin-left: 39.825vw;
-        -webkit-appearance: none;
-        appearance: none;
-        width: 2.45vw;
-        background: whitesmoke;
-        border-radius: 10px;
-    }
-    /* .displayedCVel {
-        margin-left: 16.667vw;
-        -webkit-appearance: none;
-        appearance: none;
-        width: .78125vw;
-        background: whitesmoke;
-        border-radius: 10px;
-    } */
     /* Animating the pickup truck to translate across the screen. */
     .pickup {
         animation-name: movetruck;
@@ -2182,83 +2112,30 @@ input.resetting:focus {
 }
  /* The following is the same code as above, only optimized for 720p displays */
     @media only screen and (max-width: 1280px) {
-        .chooseframetitle {
-            display: inline-block;
-            margin-left: 8.4896vw;
-        }
-        .chooseframe {
-            display: inline-block;
-            margin-left: 18.229vw;
-        }
-        /* Setting the position of the pickup-truck velocity slider. */
-        .pickupvelocitytitle {
-            display: inline-block;
-            margin-left: 10.9375vw;
-            margin-right: 11.979vw;
-        }
-        .pickupvelocity {
-            display: inline-block;
-            margin-left: 12.76vw;
-            margin-right: 10.9896vw;
-            -webkit-appearance: none;
-            appearance: none;
-            width: 6.7708vw;
-            height: .7407vh;
-            background: whitesmoke;
-            border-radius: 6px;
-            outline: none; 
-        }
-        /* .fakepickupvelocity {
-            display: inline-block;
-            margin-left: 12.76vw;
-            margin-right: 10.9896vw;
-            -webkit-appearance: none;
-            appearance: none;
-            width: 6.7708vw;
-            height: .7407vh;
-            background: whitesmoke;
-            border-radius: 6px;
-            outline: none; 
-        } */
-        /* Designing the sliders */
-        /* Setting the position of the car velocity slider. */
-        /* .carvelocitytitle {
-            display: inline-block;
-            margin-right: 10.9375vw;
-        }
-        .carvelocity {
-            display: inline-block;
-            margin-right: 12.76vw;
-            -webkit-appearance: none;
-            appearance: none;
-            width: 6.7708vw;
-            height: .7407vh;
-            background: whitesmoke;
-            border-radius: 6px;
-            outline: none;
-        } */
-        /* Setting the location of the reset button. */
-        .resetting {
-            display: inline-block;
-            border-radius: 11px;
-        }
-        /* Setting the positions of the slider velocity values. */
-        .displayedTVel {
-            margin-left: 40.625vw;
-            -webkit-appearance: none;
-            appearance: none;
-            width: .78125vw;
-            background: whitesmoke;
-            border-radius: 10px;
-        }
-        /* .displayedCVel {
-            margin-left: 16.667vw;
-            -webkit-appearance: none;
-            appearance: none;
-            width: .78125vw;
-            background: whitesmoke;
-            border-radius: 10px;
-        } */
+    /* .displayedTVel {
+        margin-left: 50.3vw;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 3.5vw;
+        background: whitesmoke;
+        border-radius: 10px;
+    }
+    .pickupvelocity {
+        display: inline-block;
+        margin-left: 15.6vw;
+        margin-right: 17.7vw;
+        -webkit-appearance: none;
+        appearance: none;
+        width: 6.7708vw;
+        height: .7407vh;
+        background: whitesmoke;
+        border-radius: 6px;
+        outline: none; 
+    }
+    .chooseframe {
+        display: inline-block;
+        margin-left: 25.1vw;
+    } */
     /* Animating the pickup truck to translate across the screen. */
     .pickup {
         animation-name: movetruck;
