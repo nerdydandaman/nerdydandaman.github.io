@@ -23,7 +23,7 @@
                 position: absolute;
                 animation-duration: 5s;
             }
-            #carSVG {
+            /* #carSVG {
                 opacity: 0%;
             }
             #carVelTitle {
@@ -34,7 +34,7 @@
             }
             #carVelValue {
                 opacity: 0%;
-            }
+            } */
         </style>
         <title>
             IRF Simulation GUI Rough Draft
@@ -51,7 +51,7 @@
                 <span class="chooseframetitle">Choose a Reference-Frame</span>
                 <span class="pickupvelocitytitle">Pickup-Truck Velocity</span>
                 <!-- <span class="carvelocitytitle" id="carVelTitle">Car Velocity</span> -->
-                <span class="resetbuton">Reset all to Default Values</span>
+                <span class="resetbuton">Reset the Simulation</span>
 
                 <!-- Create a new "row" -->
                 <br>
@@ -146,22 +146,21 @@
 
                 //  Use conditional statements to determine what background is selected and set stylization choices
                 if(document.getElementById("frameSelector").value === "Bystander"){
-                    // Resets the velocity value upon frame selection
-                    
                     // Resets the pickup location for a smoother transition upon frame selection
                     document.getElementById('truckSVG').className = 'pickup';
                     document.getElementById("crateSVG").className = 'alternateCrate';
                     // Sets details for the bystander frame
+                    chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground.jpg')";
                     // Set different resolution background images as backgrounds depending on the screen resolution
-                    if(screen.width==3840){
-                        chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground4k.jpg')";
-                    }else if(screen.width==1920){
-                        chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground.jpg')";
-                    }else if(screen.width==1080){
-                        chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground720p.jpg')";
-                    }else{
-                        chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground.jpg')";
-                    }
+                    // if(screen.width==3840){
+                    //     chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground4k.jpg')";
+                    // }else if(screen.width==1920){
+                    //     chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground.jpg')";
+                    // }else if(screen.width==1080){
+                    //     chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground720p.jpg')";
+                    // }else{
+                    //     chosenFrame.style.backgroundImage = "url('./roughPersonDraftBackground.jpg')";
+                    // }
                     // carImage.style.opacity = 0;
                     // carTitleVsbl.style.opacity = 0;
                     // carSldrVsbl.style.opacity = 0;
@@ -190,31 +189,32 @@
                     document.getElementById("crateSVG").className = 'stillcrate';
                     // Sets details for the pickup frame
                     // Set different resolution background images as backgrounds depending on the screen resolution
-                    if(screen.width==3840){
-                        chosenFrame.style.backgroundImage = "url('./scrollableBackground4k.jpg')";
-                    }else if(screen.width==1920){
-                        chosenFrame.style.backgroundImage = "url('./scrollableBackground.jpg')";
-                    }else if(screen.width==1080){
-                        chosenFrame.style.backgroundImage = "url('./scrollableBackground720p.jpg')";
-                    }else{
-                        chosenFrame.style.backgroundImage = "url('./scrollableBackground.jpg')";
-                    }
+                    chosenFrame.style.backgroundImage = "url('./roughDraftBackground.jpg')";
+                    // if(screen.width==3840){
+                    //     chosenFrame.style.backgroundImage = "url('./scrollableBackground4k.jpg')";
+                    // }else if(screen.width==1920){
+                    //     chosenFrame.style.backgroundImage = "url('./scrollableBackground.jpg')";
+                    // }else if(screen.width==1080){
+                    //     chosenFrame.style.backgroundImage = "url('./scrollableBackground720p.jpg')";
+                    // }else{
+                    //     chosenFrame.style.backgroundImage = "url('./scrollableBackground.jpg')";
+                    // }
                     // carImage.style.opacity = 0;
                     // carTitleVsbl.style.opacity = 0;
                     // carSldrVsbl.style.opacity = 0;
                     // carSldrVal.style.opacity = 0;
                     // This for loop calculates the time it should take the background to complete one whole scrolling cycle
-                    for(i = 10; i < 41; i++){
-                        bAnimT=bAnimT*k;
-                        j=i+1;
-                        k=i/j;
-                        if(bAnimVel==i){
-                            document.getElementById("chooseFrame").style.animationDuration = bAnimT+'s';
-                            break;
-                        }else{
-                            document.getElementById("chooseFrame").style.animationDuration = bAnimT+'s';
-                        }
-                    }
+                    // for(i = 10; i < 41; i++){
+                    //     bAnimT=bAnimT*k;
+                    //     j=i+1;
+                    //     k=i/j;
+                    //     if(bAnimVel==i){
+                    //         document.getElementById("chooseFrame").style.animationDuration = bAnimT+'s';
+                    //         break;
+                    //     }else{
+                    //         document.getElementById("chooseFrame").style.animationDuration = bAnimT+'s';
+                    //     }
+                    // }
                 }
             };
         </script>
