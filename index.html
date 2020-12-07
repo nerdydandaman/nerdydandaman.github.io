@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="description" content="This is a rough draft of my senior research educational simulation.">
+        <meta name="description" content="This is the final draft of my undergraduate senior research educational simulation.">
         <meta name="author" content="Daniel Olson">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1, maximum-scale=1, user-scalable=0">
         <link rel="stylesheet" href="styles.css">
@@ -37,7 +37,7 @@
             } */
         </style>
         <title>
-            IRF Simulation GUI Rough Draft
+            IRF Simulation
         </title>
     </head>
 
